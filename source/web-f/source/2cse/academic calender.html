@@ -8,6 +8,21 @@
     <script src="cont.js"></script>
   </head>
   <body>
+     <script>
+      if (!isLoggedIn()) {
+        // Redirect the user back to the login page
+        window.location.href = "index.html";
+      }
+
+      // Function to check if the user is logged in (you can implement your own logic here)
+      function isLoggedIn() {
+        // You can use cookies, local storage, or a server-side session to check the login status.
+        // For this example, I'll check if a session variable is set.
+        // Replace this with your actual login logic.
+        var loggedIn = sessionStorage.getItem("loggedIn");
+        return loggedIn === "true"; // Change this condition as per your implementation.
+      }
+    </script>
     <div class="loading-container">
       <div class="loading-content">
         <div class="dot1"></div>
